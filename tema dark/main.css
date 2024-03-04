@@ -2,19 +2,19 @@
     --green: #eee9e9;
     --white: #FFFFFF;
     --black: #000000;
-  }
+}
   
-  body {
+body {
     background: var(--bg);
     color: var(--fontColor);
     font-family: helvetica;
-  }
+}
   
-  li {
+li {
     list-style: circle;
-  }
+}
   
-  .list {
+.list {
     list-style: square;
 }
   
@@ -41,4 +41,4 @@
     border: none;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
-  }
+}
