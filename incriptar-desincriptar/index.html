@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador - Alura</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <main>
-        <div class="logo">
-            <img src="./imagens/logo-alura-1.png" alt="Logo Alura">
-        </div>
+    <div class="logo">
+        <img src="./img/logo-alura-1.png" alt="Logo Alura">
+    </div>
 
-        <div class="area-insere-texto">
-            <textarea id="inputTexto" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
-        </div>
+    <div class="area-insere-texto">
+        <textarea id="inputTexto" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+    </div>
 
-        <div id="textoTransformado">
-            <textarea id="conteudoTransformado" cols="30" rows="10" disabled></textarea>
-            <div id="conteudoTemporario">
-                <img src="./imagens/imagem-procurando-texto.png" alt="Imagem de um personagem procurando algo" class="imagem-boneco-procurando">
-                <p class="mensagem-1">Nenhuma mensagem encontrada</p>
-                <p class="mensagem-2">Digite ao lado o texto que você deseja criptografar ou descriptografar</p>
-            </div>
+    <div id="textoTransformado ">
+        <textarea id="conteudoTransformado" cols="30" rows="10" disabled></textarea>
+        <div id="conteudoTemporario ">
+            <img src="./img/imagem-procurando-texto.png" alt="Imagem de um personagem procurando algo" class="imagem-boneco-procurando">
+            <p class="mensagem-1">Nenhuma mensagem encontrada</p>
+            <p class="mensagem-2">Digite ao lado o texto que você deseja criptografar ou descriptografar</p>
         </div>
+    </div>
 
-        <div class="botoes-e-aviso">
-            <div class="alerta-dica">
-                <img src="./imagens/simbolo-exclamacao.png" alt="Atenção" class="simbolo-de-atencao"><p class="orientacao-do-texto-inserido">Apenas letras minúsculas e sem acento.</p>
-            </div>
-            <div class="botoes">
-                <button onclick="btnEncriptar()" class="botao-crip">CRIPTOGRAFAR</button>
-                <button onclick="btnDesencriptar()" class="botao-descrip">DESCRIPTOGRAFAR</button>
-                <button onclick="copia()" class="botao-copiar">COPIAR</button>
-            </div>
+    <div class="botoes-e-aviso">
+        <div class="alerta-dica">
+            <img src="./img/simbolo-exclamacao.png" alt="Atenção" class="simbolo-de-atencao"><p class="orientacao-do-texto-inserido">Apenas letras minúsculas e sem acento.</p>
         </div>
-    </main>
+        <div class="botoes">
+            <button onclick="encriptar()" class="botao-crip">CRIPTOGRAFAR</button>
+            <button onclick="desencriptar()" class="botao-descrip">DESCRIPTOGRAFAR</button>
+            <button onclick="copia()" class="botao-copiar">COPIAR</button>
+        </div>
+    </div>
+    </main> <!-- Esta tag estava faltando -->
+
     <footer>
         <a href="#" target="_blank">
             <p>Criado por RenatoDavid</p>
         </a>
     </footer>
 </body>
-<script src="/index.js" defer></script>
-</html>
+
+<script src="index.js" defer></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </html>
