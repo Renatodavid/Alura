@@ -5,57 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador - Alura</title>
-    <link rel="stylesheet" href="../tema dark/main.css"> <!-- Arquivo CSS principal -->
-    <!-- Arquivo CSS do tema dark -->
+    <link rel="stylesheet" href="index.css"> <!-- Arquivo CSS principal -->
 </head>
 
-<body>
-
-
-    <header class="Logo">
-        <img src="./img/logo-alura-1.png" alt="Logo Alura">
+<body class="light-theme">
+    <header>
+        <img class="logoAlura" src="./img/logo-alura-1.png" alt="logo da Alura">
+        <button class="btn">ligth</button>
     </header>
-    <section>
-        <div class="dark-theme"> <!-- Adicionando a classe "dark-theme" ao corpo para aplicar o tema dark -->
-            <button class="btn">dark</button>
-            <div class="logo">
-
+    <main>
+        <section>
+            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+            <div class="informacao">
+                <h6 class="informacao">*Apenas letras minúsculas e sem acento.</h6>
             </div>
-
-            <div class="area-insere-texto">
-                <textarea id="inputTexto" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+            <div class="botoes">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
             </div>
-
-            <div id="textoTransformado" class="dark">
-                <textarea id="conteudoTransformado" cols="30" rows="10" disabled></textarea>
-                <div id="conteudoTemporario">
-                    <img src="./img/imagem-procurando-texto.png" alt="Imagem de um personagem procurando algo"
-                        class="imagem-boneco-procurando">
-                    <p class="mensagem-1">Nenhuma mensagem encontrada</p>
-                    <p class="mensagem-2">Digite ao lado o texto que você deseja criptografar ou descriptografar</p>
-                </div>
-            </div>
-
-            <div class="botoes-e-aviso">
-                <div class="alerta-dica">
-                    <img src="./img/simbolo-exclamacao.png" alt="Atenção" class="simbolo-de-atencao">
-                    <p class="orientacao-do-texto-inserido">Apenas letras minúsculas e sem acento.</p>
-                </div>
-    </section>
-    <div class="botoes">
-        <button onclick="encriptar()" class="botao-crip">CRIPTOGRAFAR</button>
-        <button onclick="desencriptar()" class="botao-descrip">DESCRIPTOGRAFAR</button>
-        <button onclick="copia()" class="botao-copiar">COPIAR</button>
-    </div>
-    </div>
-
+        </section>
+        <section>
+            <textarea class="mensagem" cols="41" rows="9" id="texto"></textarea>
+            <button class="btn-copiar" onclick="copiar()">Copiar</button>
+        </section>
+    </main>
     <footer>
         <a href="#" target="_blank">
             <p>Criado por RenatoDavid</p>
         </a>
     </footer>
+    <script src="index.js"></script>
 </body>
-<script src="../tema dark/app.js" defer></script>
-<script src="index.js" defer></script>
 
 </html>

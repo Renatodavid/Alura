@@ -1,35 +1,115 @@
-*{
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 32px;
-	font-weight: 400;
-	margin: 0;
-	padding: 0;
-
-
+:root {
+    --green: #eee9e9;
+    --white: #FFFFFF;
+    --black: #000000;
 }
 
-.logo{
-	display: flex;
-	
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
 }
 
-
-
-
-
-
-
-
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
 
 .dark-theme {
-	--bg: var(--black);
-	--fontColor: var(--green);
-	--btnBg: var(--white);
-	--btnFontColor: var(--black);
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
 }
-.light-theme {
-	--bg: var(--green);
-	--fontColor: var(--black);
-	--btnBg: var(--black);
-	--btnFontColor: var(--white);
+
+.logoAlura {
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 4%;
+}
+
+main {
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 50px;
+    font-size: 170%;
+}
+
+.text-area {
+    border: solid 3px rgba(10, 56, 113, 1);
+    color: rgba(10, 56, 113, 1);
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: rgba(10, 56, 113, 1);
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.mensagem {
+    background-color: rgb(238, 231, 231);
+    background-image: url(./img/imagem-procurando-texto.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: rgba(10, 56, 113, 1);
+    margin-left: 98px;
+    margin-top: 1px;
+    padding-left: 20px;
+    position: fixed;
+    height: 60vh;
+}
+
+.mensagem:focus {
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-encriptar,
+.btn-desencriptar,
+.btn-copiar {
+    background: var(--green);
+    border: 1px solid var(--black);
+    border-radius: 24px;
+    color:var(--black);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.btn-copiar {
+    margin-left: 110px;
+    margin-top: 500px;
+}
+
+.informacao {
+    color: rgb(90, 79, 79);
+    font-size: 18px;
+}
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
 }

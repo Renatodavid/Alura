@@ -1,68 +1,78 @@
-function encriptar() {
-    let texto = document.getElementById('inputTexto').value;
-    texto = texto.split('');
-    for (let i = 0; i < texto.length; i++) {
-        switch (texto[i]) {
-            case 'a':
-                texto[i] = 'ai';
-                break;
-            case 'e':
-                texto[i] = 'enter';
-                break;
-            case 'i':
-                texto[i] = 'imes';
-                break;
-            case 'o':
-                texto[i] = 'ober';
-                break;
-            case 'u':
-                texto[i] = 'ufat';
-                break;
-            default:
-                break;
-        }
-    }
-    document.getElementById('conteudoTransformado').value = texto.join('');
+const display = document.querySelector(".sua-classe-de-display");
+const textArea = document.querySelector(".text-area");
+const mensagem = document.querySelector(".mensagem");
+const texto = document.getElementById(".btn-copiar");
+
+
+
+function btnEncriptar() {
+    const textoEncriptado = encriptar(textArea.value);
+    mensagem.value = textoEncriptado;
+    textArea.value = "";
 }
 
-function desencriptar() {
-    let texto = document.getElementById('inputTexto').value;
-    texto = texto.split('');
-    let resultado = [];
-    for (let i = 0; i < texto.length; i++) {
-        if (texto[i] == 'a' && texto[i + 1] == 'i') {
-            resultado.push(texto[i]);
-            resultado = 1;
-        } else if (texto[i] == 'e' && texto[i + 1] == 'n' && texto[i + 2] == 't' && texto[i + 3] == 'e' && texto[i + 4] == 'r') {
-            resultado.push(texto[i]);
-            resultado = 1;
-        } else if (texto[i] == 'i' && texto[i + 1] == 'm' && texto[i + 2] == 'e' && texto[i + 3] == 's') {
-            resultado.push(texto[i]);
-            resultado = 1;
-        } else if (texto[i] == 'o' && texto[i + 1] == 'b' && texto[i + 2] == 'e' && texto[i + 3] == 'r') {
-            resultado.push(texto[i]);
-            resultado = 1;
-        } else if (texto[i] == 'u' && texto[i + 1] == 'f' && texto[i + 2] == 'a' && texto[i + 3] == 't') {
-            resultado.push(texto[i]);
-            resultado = 1;
-        } else {
-            resultado.push(texto[i]);
-        }
+function encriptar(stringEncriptada) {
+    const matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase();
+
+    for (const [original, substituto] of matrizCodigo) {
+        stringEncriptada = stringEncriptada.replaceAll(original, substituto);
     }
-    document.getElementById('conteudoTransformado').value = resultado.join('');
+
+    return stringEncriptada;
 }
 
-async function copiarTexto() {
-    let copiarTexto = document.getElementById('inputTexto').value;
-    let text = copiarTexto;
-    try {
-        await navigator.clipboard.writeText(text);
-        alert("Texto copiado com sucesso!");
-    } catch (error) {
-        alert("Não foi possível copiar o texto");
-    }
+function btnDesencriptar() {
+    const textoDesencriptado = desencriptar(textArea.value);
+    mensagem.value = textoDesencriptado;
+    textArea.value = "";
 }
 
-document.getElementById('botao-crip').addEventListener('click', encriptar);
-document.getElementById('botao-descrip').addEventListener('click', desencriptar);
-document.getElementById('botao-copiar').addEventListener('click', copiarTexto);
+function desencriptar(stringDesencriptada) {
+    const matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for (const [original, substituto] of matrizCodigo) {
+        stringDesencriptada = stringDesencriptada.replaceAll(substituto, original);
+    }
+
+    return stringDesencriptada;
+}
+
+
+const elementoTexto = document.getElementById("texto");
+
+function copiar() {
+    const texto = elementoTexto.value;
+
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+            console.log('Texto copiado com sucesso!');
+            alert('Mensagem copiada com sucesso!');
+        })
+        .catch(err => {
+            console.error('Erro ao copiar o texto: ', err);
+            alert('Erro ao copiar a mensagem. Por favor, tente novamente.');
+        });
+}
+
+
+
+const switcher = document.querySelector('.btn');
+
+switcher.addEventListener('click', function() {
+    document.body.classList.toggle('light-theme');
+    document.body.classList.toggle('dark-theme');
+
+    const className = document.body.className;
+    if (className === "light-theme") {
+        this.textContent = "dark";
+        
+        document.querySelector('.informacao').style.color = 'rgb(5, 5, 5)';
+    } else {
+        this.textContent = "light";
+       
+        document.querySelector('.informacao').style.color = 'rgb(0, 0, 0)';
+    }
+    console.log('current class name:' + className);
+});
