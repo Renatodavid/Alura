@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dia 5</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dia 5 - Lista de Compras</title>
+<link rel="stylesheet" href="dia5.css">
 </head>
 <body>
-    
+<div class="container">
+  <h1>Lista de Compras</h1>
+  <button id="addBtn">Adicionar Comida</button>
+  <button id="showListBtn" style="display:none;">Mostrar Lista de Compras</button>
+  <ul id="foodList" style="display:none;"></ul>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Deseja adicionar comida à sua lista de compras?</p>
+    <button id="yesBtn">Sim</button>
+    <button id="noBtn">Não</button>
+  </div>
+</div>
+
+<script src="dia5.js"></script>
 </body>
 </html>
