@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  #lista-compras {
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: aqua;
+  }
