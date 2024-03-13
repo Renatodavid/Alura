@@ -9,12 +9,12 @@ export const Home = () => (
     <div className="container">
     
       <form className="forms" type="submit">
-        <label className="text " htmlFor="email">Digite o seu melhor e-mail</label>
+        <label className="text " htmlFor="email"> E-mail</label>
         <input type="text" placeholder="email@exemplo.com" />
        <label className="text" htmlFor="password">Senha</label>
         <input type="password" placeholder="********" />
-        <button type="submit">Acessar conta</button>
-        <span className="text-sm">Não possui uma conta? <a href="NovaConta" >Crie uma agora!</a></span>
+        <button type="submit">Criar conta</button>
+        <span className="text-sm">Ja possui uma conta? <a href="NovaConta" >Acesse agora!</a></span>
       </form>
      
       </div>

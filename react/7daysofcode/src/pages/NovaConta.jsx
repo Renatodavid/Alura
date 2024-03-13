@@ -4,11 +4,11 @@ export default function NovaConta() {
   return (
     
     <div className='container-form'>
-      <div className='container-fluid'>
+      <div className='container-fluid '>
       <h1>Criar conta</h1>
       </div>
       
-        <form className='formNovaConta' action="onsubmit"></form>
+        <form action="onsubmit"></form>
         <label htmlFor="name">Digite seu nome</label>
         <input className='inputNovaConta' type= "text" placeholder="nome" />
         <label htmlFor="sobrenome">Digite seu sobrenome</label>
