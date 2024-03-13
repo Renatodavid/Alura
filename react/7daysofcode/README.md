@@ -10,4 +10,3 @@ Projeto para o #7DaysOfCode de #React para a Alura.
 - ESLint
 - Vite
 
-Demo: [https://alura-seven-days-of-code.web.app/](https://alura-seven-days-of-code.web.app/)
