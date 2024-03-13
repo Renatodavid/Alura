@@ -1,124 +1,95 @@
-*{
-    width: 512px;
-    height: 69px;
-    top: 99.5px;
-    padding: 0px, 0px, 8px, 0px;
-}
-.text{
-    font-size: larger;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    
-}
-
-.container{
-    display: grid;
-    width: 1300px;
-    height: 100%;
-    align-items: center;
+.container {
+    display: flex;
     justify-content: center;
-    
-    
-    
-    
-}
-.forms{
-    width: 378px;
-    height: 154px;
-    top: 367.5px;
-    left: 567px;
-   
-
-}
-
-
-button {
-    width: Hug (378px);
-    height: Hug (40px);
-    top: 114px;
-    padding: 8.5px, 122.98px, 7.5px, 123.02px;
-    border-radius: 4px;
-    background: #10B981;
-    margin: 20px;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .forms {
+    width: 300px; /* Ajuste conforme necessário */
+    text-align: center;
+  }
+  
+  .text-xl {
+    font-size: 24px; /* Tamanho do texto */
+  }
+  
+  .text-sky-600 {
+    color: #007ace; /* Cor do texto */
+  }
+  
+  .text {
+    font-size: 16px; /* Tamanho do texto */
+    margin-bottom: 8px; /* Espaçamento entre os elementos */
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  button {
+    width: 50%;
+    margin-bottom: 16px; /* Espaçamento entre os elementos */
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007ace; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
     cursor: pointer;
-    
-
-}
-
-input {
-    width: Hug (378px);
-    height: Hug (42px);
-    padding: 8px, 9px, 15px, 9px;
-    border-radius: 4px;
-    border: 1px;
-    border: 1px solid #94A3B8;
-    background: #FFFFFF;
-    margin: 20px 20px 20px 20px;
-
-
-}
-.text-sm{
-    width: 229px;
-    height: 20px;
-    font-family: Roboto;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    text-align: left;
-    letter-spacing: 0em;
-    width: Hug (256.58px);
-    height: Hug (20.5px);
-    top: 529px;
-    left: 627.71px;
-    padding: 0px, 7.58px, 0.5px, 0px;
-    
-
-}
-@media screen and (max-width: 1024px) {
-    .container{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    
-}
-@media screen and (max-width: 768px) {
-
-    .container{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        
-    }
+  }
+  
+  button:hover {
+    background-color: #005ea4; /* Cor de fundo do botão ao passar o mouse */
+  }
+  
+  .text-sm {
+    font-size: 14px; /* Tamanho do texto */
+  }
   
 
-    
-}
-@media screen and (max-width: 550px) {
-    .container{
-       display: grid;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    
-}
-@media screen and (max-width: 320px) {
-    .container{
-       display: grid;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    
-}
+
+/*Nova conta*/
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container-fluid {
+    text-align: center;
+  }
+  
+  .formNovaConta {
+    width: 300px; /* Ajuste conforme necessário */
+    text-align: center;
+  }
+  
+  .inputNovaConta {
+    width: 100%;
+    margin-bottom: 16px; /* Espaçamento entre os elementos */
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 50%;
+    margin-bottom: 16px; /* Espaçamento entre os elementos */
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #007ace; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005ea4; /* Cor de fundo do botão ao passar o mouse */
+  }
+  
+  .text-sm {
+    font-size: 14px; /* Tamanho do texto */
+  }
+  
